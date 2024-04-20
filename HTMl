@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batman vs Coringa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="personagem" >
+        <div class="barra-vida" :style="{width: heroi.vida + '%'}">Vida Herói</div>
+        <div class="sprite"><img src=".//img/batman.png" alt="Batman"></div>
+        <h1>Batman</h1>
+        <div class="acoes">
+            <button @click="atacar(true)">Atacar</button>
+            <button @click="defender(true)">Defender</button>
+            <button @click="usarPocao(true)">Usar Poção</button>
+            <button @click="correr(true)">Correr</button>
+        </div>
+    </div>
+    <div class="personagem" >
+        <div class="barra-vida" :style="{width: vilao.vida + '%'}">Vida Vilão</div>
+        <div class="sprite"><img src="./img/coringaa.png" alt="Coringa"></div>
+        <h1>Coringa</h1>
+        <div class="acoes">
+            <button @click="atacar(true)">Atacar</button>
+            <button @click="defender(true)">Defender</button>
+            <button @click="usarPocao(true)">Usar Poção</button>
+            <button @click="correr(true)">Correr</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
